@@ -32,12 +32,14 @@ struct EventGeneratorView: View {
                     DatePicker(
                         "Start Date",
                         selection: $viewModel.startDate,
+                        in: Date()...,
                         displayedComponents: [.date]
                     ).padding(.vertical, 5)
                     
                     DatePicker(
                         "End Date",
                         selection: $viewModel.endDate,
+                        in: viewModel.startDate...,
                         displayedComponents: [.date]
                     ).padding(.vertical, 5)
                     

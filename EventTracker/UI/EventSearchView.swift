@@ -34,6 +34,7 @@ struct EventSearchView: View {
                     DatePicker(
                         "End Date",
                         selection: $endDate,
+                        in: startDate...,
                         displayedComponents: [.date]
                     ).padding(.vertical, 5)
                     
