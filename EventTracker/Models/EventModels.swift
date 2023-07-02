@@ -75,13 +75,13 @@ struct Event: Identifiable, Hashable {
                 return []
             } else if start > endDate {
                 return []
-            } else if start < startDate && end < endDate {
+            } else if start <= startDate && end <= endDate {
                 return getWeeklyEventDates(startDate: startDate, endDate: end)
-            } else if start < startDate && end > endDate {
+            } else if start <= startDate && end >= endDate {
                 return getWeeklyEventDates(startDate: startDate, endDate: endDate)
-            } else if start > startDate && end > endDate {
+            } else if start >= startDate && end >= endDate {
                 return getWeeklyEventDates(startDate: start, endDate: endDate)
-            } else if start > startDate && end < endDate {
+            } else if start >= startDate && end <= endDate {
                 return getWeeklyEventDates(startDate: start, endDate: end)
             } else {
                 return []
